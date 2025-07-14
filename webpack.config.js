@@ -8,6 +8,8 @@ const Dotenv = require("dotenv-webpack");
 const Webpack = require("webpack");
 
 module.exports = (env, argv) => {
+  const isProduction = env.NODE_ENV === "production";
+  const envFilename = isProduction ? ".env.production" : ".env.development";
 
   const config = {
     target: "web",
@@ -50,7 +52,7 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new Dotenv({
-        path: path.resolve(__dirname, "./.env")
+        path: path.resolve(__dirname, `./${envFilename}`)
       })
     ],
     stats: { warnings: false }
