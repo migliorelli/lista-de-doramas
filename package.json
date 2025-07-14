@@ -1,0 +1,28 @@
+{
+  "name": "lista-de-doramas",
+  "version": "1.0.0",
+  "dependencies": {
+    "@lemonadejs/router": "^6.0.0",
+    "@lemonadejs/toolbar": "^5.0.6",
+    "dotenv-webpack": "^8.1.1",
+    "firebase": "^11.10.0",
+    "lemonadejs": "^5.0.8"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production npx webpack --mode=production --config webpack.config.js",
+    "dev": "NODE_ENV=development npx webpack serve --history-api-fallback --mode=development"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "html-replace-webpack-plugin": "^2.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.100.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
